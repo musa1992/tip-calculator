@@ -140,3 +140,45 @@ input:focus {
     color: hsl(183, 100%, 15%);
 }
 
+
+/** media query for desktop screens ***/
+
+@media (min-width: 1000px){
+    main{
+        display: flex;
+        gap: 2em;
+        margin: 0 auto;
+        width: 70%;
+        padding-bottom: 1.5em;
+        border-bottom-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+    }
+
+    .bill-tip-section {
+        flex-grow: 1;
+    }
+
+    .tip-percent-container {
+        grid-template-columns: repeat(3, 1fr );
+    }
+
+    .totals-section {
+        /* display: flex;
+        flex-direction: column; */
+        /* gap: 2em; */
+       flex-grow: 1;
+    }
+
+    .total {
+        align-self: start;
+    }
+
+    .btn-reset {
+        align-self: end;
+    }
+
+
+
+    
+}
+
