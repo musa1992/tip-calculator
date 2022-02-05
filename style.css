@@ -29,6 +29,71 @@ header {
 }
 
 header > img {
-    margin: 0 auto;
+    margin: 0 auto;   
+}
+
+/** bill- tip -section **/
+
+main {
+    background-color: hsl(0, 0%, 100%);
+    padding: 2em;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.bill-tip-section {
+    display: grid;
+    row-gap: 2em;
+}
+
+.input-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5em 1em;
+    margin-top: .5em;
+    background-color: hsl(189, 41%, 97%);
+}
+.input-area:hover{
+    cursor: pointer;
+
+}
+
+input {
+    background-color: transparent;
+    border: none;
+    text-align: right;
+    font-size: 1.5rem;
+    color: hsl(183, 100%, 15%);
    
+}
+input:hover {
+    cursor: pointer;
+}
+input:focus {
+    outline: none;
+}
+
+.tip-percent-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.tip-percent {
+    background-color: hsl(183, 100%, 15%);
+    text-align: center;
+    font-weight: 700;
+    color: #FFFFFF;
+    border-radius: 3px;
+    padding: .25em 0;
+}
+.tip-percent:hover{
+    cursor: pointer;
+}
+
+.custom-tip {
+    background-color: hsl(189, 41%, 97%);
+    color: hsl(184, 14%, 43%)
 }
