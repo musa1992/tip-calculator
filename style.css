@@ -1,0 +1,34 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Space Mono', monospace;
+    background-color: hsl(189, 41%, 84%);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+p {
+    margin: 0;
+}
+
+/** ************typography ******************/
+
+
+/******/
+
+header {
+    padding: 3rem 0;
+}
+
+header > img {
+    margin: 0 auto;
+   
+}
