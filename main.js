@@ -3,6 +3,7 @@ let billInput = document.getElementById('bill-amount');
 let customerCountInput = document.getElementById('total-people')
 let tipNode = document.getElementById('tip');
 let billNode = document.getElementById('bill')
+let errorMsg = document.querySelector('.error-msg')
 
 let tipCalculator = (()=>{
     function calculateTipAmount(totalBill, tipPercent){
@@ -75,7 +76,7 @@ billInput.addEventListener('input',()=>{
 
 
 customerCountInput.addEventListener('input',()=>{
-    let errorMsg = document.querySelector('.error-msg')
+    
     if (parseInt(customerCountInput.value) == 0){
         customerCountInput.parentElement.style.borderColor = "red"
         errorMsg.style.display = "block"
@@ -84,7 +85,7 @@ customerCountInput.addEventListener('input',()=>{
         errorMsg.style.display = "none"
     }
    
-    if(billInput.value.length > 0 && tipPercentage > 0 && customerCountInput.value.length > 0){
+    if(billInput.value.length > 0 && tipPercentage > 0 && customerCountInput.value.length > 0 && parseInt(customerCountInput.value) > 0){
         let tipPerPerson = tipCalculator.tipPerPerson(getNumberOfPeople(),getBill(), tipPercentage)
         let billPerPerson = tipCalculator.totalBillPerPerson(getBill(),getNumberOfPeople(),tipPercentage)
         updateScreen(tipPerPerson,billPerPerson)
@@ -93,6 +94,8 @@ customerCountInput.addEventListener('input',()=>{
 
 document.getElementById("reset").addEventListener('click',()=>{
         customerCountInput.value = ""
+        customerCountInput.parentElement.style.borderColor = "transparent"
+        errorMsg.style.display = "none"
         billInput.value = ""
         billInput.parentElement.style.borderColor ="transparent"
         tipNode.textContent ="$0.00"
