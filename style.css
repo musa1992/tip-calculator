@@ -19,6 +19,10 @@ p {
     margin: 0;
 }
 
+button{
+    cursor: pointer;
+}
+
 /** ************typography ******************/
 
 
@@ -39,6 +43,7 @@ main {
     padding: 0 2em;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
+    
 }
 
 .bill-tip-section {
@@ -100,6 +105,11 @@ input:focus {
     color: hsl(184, 14%, 43%)
 }
 
+.selected-tip {
+    background-color: hsl(189, 41%, 84%);
+    color: #000;
+}
+
 /******** totals-section *************/
 
 .totals-section {
@@ -119,10 +129,10 @@ input:focus {
 }
 
 .amount {
-    align-self: stretch;
     font-size: 1.5em;
     font-weight: 700;
     color: hsl(172, 67%, 45%);
+   
 }
 
 .total {
@@ -152,10 +162,11 @@ input:focus {
         padding-bottom: 1.5em;
         border-bottom-right-radius: 30px;
         border-bottom-left-radius: 30px;
+
     }
 
     .bill-tip-section {
-        flex-grow: 1;
+        flex: 1;
     }
 
     .tip-percent-container {
@@ -163,10 +174,7 @@ input:focus {
     }
 
     .totals-section {
-        /* display: flex;
-        flex-direction: column; */
-        /* gap: 2em; */
-       flex-grow: 1;
+        flex: 1;
     }
 
     .total {
@@ -175,6 +183,10 @@ input:focus {
 
     .btn-reset {
         align-self: end;
+    }
+
+    .btn-reset:hover{
+        background-color: hsl(189, 41%, 83%);
     }
 
 
